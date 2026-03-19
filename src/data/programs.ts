@@ -2,44 +2,12 @@ import type { Program } from "../types/program";
 
 export const programs: Program[] = [
   {
-    id: "iot-auto",
-    displayName: "Roaming IOT Settlement Generator",
-    repositoryName: "IotAuto",
-    category: "Desktop Utility",
-    status: "README fallback",
-    tagline: "Excel settlement automation for roaming IOT workflows.",
-    summary:
-      "Tkinter 기반 Python 도구로 템플릿 Excel, raw 데이터, 환율 파일을 조합해 정산 결과물을 생성합니다. 저장소에서 확인된 GUI 타이틀은 'Roaming IOT Settlement Generator v3.3'입니다.",
-    usage: [
-      "Template Files, Raw Data File, Exchange Rate Check 파일을 순서대로 선택합니다.",
-      "Start Processing을 실행한 뒤 출력 폴더를 지정합니다.",
-      "템플릿별 처리 결과와 실패 항목을 요약 팝업으로 확인합니다.",
-    ],
-    highlights: [
-      "Tkinter GUI 기반 실행 흐름",
-      "Excel 템플릿 다중 선택 지원",
-      "정산 결과 파일 일괄 생성",
-    ],
-    tags: ["Python", "Tkinter", "Excel", "Settlement"],
-    links: {
-      accessNote:
-        "웹으로 바로 실행되는 페이지는 없으므로 저장소와 문서를 먼저 확인해야 합니다.",
-      readmeLabel: "Open README",
-      readmeUrl: "https://github.com/tyler-bit-ai/IotAuto/blob/master/README.md",
-      primaryLabel: "Open Repository",
-      primaryUrl: "https://github.com/tyler-bit-ai/IotAuto",
-      secondaryLabel: "Open Repository Home",
-      secondaryUrl: "https://github.com/tyler-bit-ai/IotAuto",
-      accessMode: "readme",
-    },
-  },
-  {
     id: "news-collector",
     displayName: "NewsCollector",
     repositoryName: "NewsCollectorV2",
     category: "Intelligence Pipeline",
     status: "README fallback",
-    tagline: "SKT 로밍팀용 뉴스 수집, AI 분석, 웹/이메일 배포 시스템.",
+    tagline: "뉴스 수집, AI 분석, 웹/이메일 배포 시스템.",
     summary:
       "6개 카테고리의 기사와 게시글을 자동 수집하고 AI 2단계 분석을 거쳐 웹 리포트와 이메일로 배포하는 Python 기반 시스템입니다. README에서 CLI 실행, 웹 대시보드, 0404 해외안전여행 공지 수집까지 확인됩니다.",
     usage: [

@@ -13,8 +13,8 @@ function App() {
   return (
     <main className="app-shell">
       <section className="hero">
-        <p className="eyebrow">Roaming Team Dashboard</p>
-        <h1>로밍팀 프로그램 모음</h1>
+        <p className="eyebrow">Program Dashboard</p>
+        <h1>프로그램 모음</h1>
       </section>
 
       <section className="content-layout">
