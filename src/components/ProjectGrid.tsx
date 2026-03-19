@@ -19,7 +19,7 @@ export function ProjectGrid({
         <h2>프로그램 선택</h2>
         <p>
           카드를 누르면 오른쪽 패널에서 설명과 사용법을 먼저 읽고, 필요한 경우
-          바로 앱 또는 README로 이동할 수 있습니다.
+          `Open README`를 먼저 확인한 뒤 앱 또는 저장소로 이동할 수 있습니다.
         </p>
       </div>
       <div className="project-grid">

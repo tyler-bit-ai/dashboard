@@ -290,6 +290,12 @@
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
 }
 
+.cta.readme {
+  border: 1px solid rgba(15, 118, 110, 0.2);
+  color: var(--accent-strong);
+  background: linear-gradient(180deg, rgba(236, 252, 249, 0.98), rgba(223, 244, 239, 0.92));
+}
+
 .cta.secondary {
   border: 1px solid rgba(54, 44, 33, 0.12);
   background: rgba(255, 255, 255, 0.82);

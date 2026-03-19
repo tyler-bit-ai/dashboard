@@ -2,6 +2,8 @@ export type ProgramAccessMode = "app" | "readme";
 
 export interface ProgramLinkSet {
   accessNote: string;
+  readmeLabel?: string;
+  readmeUrl?: string;
   primaryLabel: string;
   primaryUrl: string;
   secondaryLabel: string;

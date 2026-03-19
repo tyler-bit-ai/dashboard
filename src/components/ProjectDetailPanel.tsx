@@ -5,6 +5,7 @@ interface ProjectDetailPanelProps {
 }
 
 export function ProjectDetailPanel({ program }: ProjectDetailPanelProps) {
+  const showReadmeLink = Boolean(program.links.readmeLabel && program.links.readmeUrl);
   const showSecondaryLink =
     program.links.secondaryUrl !== program.links.primaryUrl;
 
@@ -54,6 +55,17 @@ export function ProjectDetailPanel({ program }: ProjectDetailPanelProps) {
       </div>
 
       <div className="cta-stack">
+        {showReadmeLink ? (
+          <a
+            className="cta readme"
+            href={program.links.readmeUrl}
+            target="_blank"
+            rel="noreferrer"
+            aria-label={`${program.displayName} ${program.links.readmeLabel}`}
+          >
+            {program.links.readmeLabel}
+          </a>
+        ) : null}
         <a
           className="cta primary"
           href={program.links.primaryUrl}
