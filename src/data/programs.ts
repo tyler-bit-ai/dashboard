@@ -6,19 +6,19 @@ export const programs: Program[] = [
     displayName: "NewsCollector",
     repositoryName: "NewsCollectorV2",
     category: "Intelligence Pipeline",
-    status: "README fallback",
-    tagline: "뉴스 수집, AI 분석, 웹/이메일 배포 시스템.",
+    status: "v2.0",
+    tagline: "뉴스 수집, AI 2단계 분석, 웹/이메일 배포를 묶은 Python 시스템.",
     summary:
-      "6개 카테고리의 기사와 게시글을 자동 수집하고 AI 2단계 분석을 거쳐 웹 리포트와 이메일로 배포하는 Python 기반 시스템입니다. README에서 CLI 실행, 웹 대시보드, 0404 해외안전여행 공지 수집까지 확인됩니다.",
+      "6개 카테고리 기사·게시글을 자동 수집하고 AI 2단계 분석 후 웹 리포트와 이메일로 배포하는 시스템입니다. 최신 README 기준으로 0404.go.kr 당일 통신 이슈 공지 수집, Global Roaming Trend 한글 전용 표시, 수신자 그룹 분리 관리까지 포함합니다.",
     usage: [
-      "Python 3.9+ 환경에서 `pip install -r requirements.txt`로 의존성을 설치합니다.",
-      "`.env.example`을 복사해 `.env`를 만들고 API 키와 SMTP 정보를 채웁니다.",
-      "`python run.py` 또는 `python main.py`로 전체 파이프라인을 실행하거나 `python start_web.py`로 웹 대시보드를 시작합니다.",
+      "Python 3.9+에서 `pip install -r requirements.txt` 후 필요 시 `pip install python-dotenv`를 추가합니다.",
+      "`.env.example`을 복사한 뒤 Naver, Google CSE, OpenAI, Gmail SMTP와 리포트 옵션 값을 설정합니다.",
+      "`python run.py` 또는 `python main.py`로 전체 파이프라인을 실행하고, `python start_web.py`로 관리용 웹 대시보드를 실행합니다.",
     ],
     highlights: [
-      "뉴스/블로그/카페/Google 검색 수집",
-      "AI 요약 + 전략 인사이트 2단계 분석",
-      "HTML 웹 리포트와 이메일 배포",
+      "Naver/Google + 0404 해외안전여행 공지 수집",
+      "AI 요약과 전략 인사이트 2단계 분석",
+      "웹 리포트 이력 저장과 수신자 그룹별 이메일 발송",
     ],
     tags: ["Python", "OpenAI", "News", "Analytics", "Email"],
     links: {
@@ -39,22 +39,23 @@ export const programs: Program[] = [
     repositoryName: "eSIMPriceJapan",
     category: "Published Dashboard",
     status: "Live",
-    tagline: "Amazon JP와 Qoo10 JP 기준 eSIM 상품 인사이트 대시보드.",
+    tagline: "Amazon JP·Qoo10 JP eSIM 상품을 국가별로 비교하는 공개 대시보드.",
     summary:
-      "일본 마켓플레이스에서 수집한 eSIM 상품 데이터를 필터링하고, 데이터 용량 분포와 네트워크 비중, 셀러 배지 분포, 상세 항목을 확인할 수 있는 공개 대시보드입니다.",
+      "일본 마켓플레이스 eSIM 상품을 `site + country + dataset` 단위로 비교하는 공개 대시보드입니다. 최신 README 기준으로 `amazon_jp`, `qoo10_jp`를 지원하고, CSV/JSONL 산출물과 함께 KPI, 정렬, 다운로드, KRW 환산 가격까지 제공합니다.",
     usage: [
-      "필터 영역에서 네트워크, 데이터, 사용기간, 통신사 조건을 조정합니다.",
-      "상단 차트와 분포 섹션으로 전체 구성을 확인합니다.",
-      "상세 항목 표나 Excel 다운로드로 원본 수준 데이터를 확인합니다.",
+      "대시보드에서 사이트, 국가, 데이터셋을 고른 뒤 검색어·네트워크·데이터·사용기간·통신사 조건을 조정합니다.",
+      "가격, 판매량, 리뷰, 검색 위치, 사용기간 기준으로 정렬하며 KPI와 분포를 확인합니다.",
+      "필터 결과를 다운로드하고 필요하면 `npm run dashboard`로 로컬 대시보드를 확인합니다.",
     ],
     highlights: [
-      "Amazon JP / Qoo10 JP 데이터 비교",
-      "필터 기반 탐색",
-      "상세 항목과 Excel 다운로드 지원",
+      "Amazon JP / Qoo10 JP 국가별 비교",
+      "KRW 환산 가격과 dataset selector 지원",
+      "상세 항목 다운로드와 publish workflow 제공",
     ],
     tags: ["eSIM", "Japan", "Marketplace", "Dashboard"],
     links: {
-      accessNote: "공개된 GitHub Pages 대시보드로 바로 진입할 수 있습니다.",
+      accessNote:
+        "공개된 GitHub Pages 대시보드에서 사이트·국가·데이터셋별 결과를 바로 확인할 수 있습니다.",
       readmeLabel: "Open README",
       readmeUrl: "https://github.com/tyler-bit-ai/eSIMPriceJapan/blob/main/README.md",
       primaryLabel: "Open App",
@@ -70,22 +71,23 @@ export const programs: Program[] = [
     repositoryName: "eSIMPriceCollectorDomestic",
     category: "Published Dashboard",
     status: "Live",
-    tagline: "국내 판매 해외 eSIM 가격 밴드와 망 유형 차이를 비교하는 대시보드.",
+    tagline: "국내 eSIM 판매 사이트의 해외 사용 상품 가격을 비교하는 정적 대시보드.",
     summary:
-      "국가별 가격 분포 밴드, local/roaming 가격 차이, 상세 비교표를 통해 국내 판매 해외 eSIM 상품을 비교하는 공개 대시보드입니다. 스냅샷 시점 선택과 도움말도 제공됩니다.",
+      "국내 eSIM 판매 사이트의 해외 사용 상품을 수집·정규화해 GitHub Pages 대시보드로 비교하는 프로젝트입니다. 최신 README 기준으로 `usimsa`, `pindirect`, `rokebi`, `maaltalk`와 JP/VN/US/PH 대상 국가를 지원하며, 최신 publish 스냅샷과 이력 비교를 함께 제공합니다.",
     usage: [
-      "상단에서 크롤링 시점과 필터 조건을 선택합니다.",
-      "Price Distribution과 Local vs Roaming 섹션에서 가격 차이를 비교합니다.",
-      "상세 비교표와 Excel 다운로드로 세부 옵션을 확인합니다.",
+      "상단에서 사이트, 국가, 사용일수, 데이터, 망 유형, 정렬 기준과 비교 시점을 선택합니다.",
+      "국가별 가격 분포 밴드와 `local / roaming` 가격 차이, 시점별 변경 상품을 확인합니다.",
+      "필요하면 `python -m app crawl --registry config/source_registry.yml --out data --publish-dashboard`로 대시보드용 데이터를 갱신합니다.",
     ],
     highlights: [
-      "국가별 가격 분포 밴드",
-      "local / roaming 차이 분석",
-      "스냅샷 선택과 상세 비교표",
+      "4개 국내 판매 사이트 통합 수집",
+      "최신 스냅샷과 일자별 이력 비교",
+      "상세 비교표와 GitHub Actions 배포",
     ],
     tags: ["eSIM", "Pricing", "Domestic", "Dashboard"],
     links: {
-      accessNote: "공개된 GitHub Pages 대시보드로 바로 진입할 수 있습니다.",
+      accessNote:
+        "공개된 GitHub Pages 대시보드에서 최신 스냅샷과 과거 시점을 함께 비교할 수 있습니다.",
       readmeLabel: "Open README",
       readmeUrl:
         "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic/blob/main/README.md",
@@ -103,22 +105,23 @@ export const programs: Program[] = [
     category: "Published Dashboard",
     status: "Live",
     tagline:
-      "해외 사용자가 한국에서 사용할 eSIM을 검색할 때의 market signals를 읽는 대시보드.",
+      "미국 사용자의 Korea eSIM 검색 수요를 공개 Google 신호로 읽는 분석 대시보드.",
     summary:
-      "local Google signal analysis를 기반으로 Korea 관련 eSIM 키워드 우선순위, modifier, seed lineage, signal summary, snapshot delta를 탐색할 수 있는 읽기 전용 공개 대시보드입니다.",
+      "공개 Google 신호만 사용해 미국 영어 검색 환경(`hl=en`, `gl=us`)에서 Korea eSIM 키워드를 비교·우선순위화하는 분석 프로젝트입니다. 최신 README 기준으로 Streamlit 운영 대시보드와 `site/` 정적 Public Dashboard를 함께 제공하며, modifier·signal·seed lineage·snapshot delta를 읽을 수 있습니다.",
     usage: [
-      "Filters에서 검색 우선순위와 signal 범위를 조정합니다.",
-      "Published KPIs와 Korea Keyword Comparison에서 핵심 타깃 키워드를 확인합니다.",
-      "Modifier, Seed, Signal, Snapshot Delta 섹션으로 변화 흐름을 읽습니다.",
+      "기본 운영 화면은 `streamlit run src/keyword_analysis/dashboard.py`로 실행합니다.",
+      "대시보드에서 한국 eSIM 키워드 우선순위, modifier, signal, seed lineage, snapshot 변화를 확인합니다.",
+      "공개용 정적 데이터는 `export_korea_public_dashboard`로 `site/data`에 생성해 배포합니다.",
     ],
     highlights: [
-      "Published target explorer",
-      "Keyword priority와 signal 요약",
-      "변화 추적용 snapshot delta",
+      "공개 Google 신호 기반 Korea keyword prioritization",
+      "Streamlit 운영 대시보드 + 정적 Public Dashboard",
+      "Autocomplete, related searches, Trends 기반 변화 추적",
     ],
     tags: ["eSIM", "Korea", "Search Signals", "Market Intelligence"],
     links: {
-      accessNote: "공개된 GitHub Pages 대시보드로 바로 진입할 수 있습니다.",
+      accessNote:
+        "공개된 GitHub Pages 대시보드에서 게시용 스냅샷을 읽을 수 있고, 운영 분석은 별도 Streamlit 대시보드에서 수행합니다.",
       readmeLabel: "Open README",
       readmeUrl: "https://github.com/tyler-bit-ai/eSIMKeywordAnalysis/blob/master/README.md",
       primaryLabel: "Open App",
