@@ -133,7 +133,7 @@ export const programs: Program[] = [
   },
   {
     id: "kresident",
-    displayName: "Kresident",
+    displayName: "체류외국인 통계 Dashboard",
     repositoryName: "kresident",
     category: "Data Pipeline + Static Dashboard",
     status: "Live",
