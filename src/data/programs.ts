@@ -131,4 +131,36 @@ export const programs: Program[] = [
       accessMode: "app",
     },
   },
+  {
+    id: "kresident",
+    displayName: "Kresident",
+    repositoryName: "kresident",
+    category: "Data Pipeline + Static Dashboard",
+    status: "README fallback",
+    tagline: "국내 체류 외국인 통계 원본 수집과 정적 대시보드 생성 프로젝트.",
+    summary:
+      "법무부 통계월보 게시판에서 `체류외국인` 원본 엑셀을 자동 다운로드하고, 누적 raw 데이터를 바탕으로 GitHub Pages용 정적 대시보드를 생성하는 Node.js + TypeScript 프로젝트입니다.",
+    usage: [
+      "README를 먼저 확인해 `.env.example` 기반 환경 설정과 저장 경로 구성을 맞춥니다.",
+      "`npm run dev`로 신규 월보 원본 다운로드를 실행하고 registry/log 결과를 확인합니다.",
+      "`npm run generate:dashboard`로 `site/` 정적 산출물을 생성해 대시보드 데이터를 갱신합니다.",
+    ],
+    highlights: [
+      "체류외국인 월보 원본 자동 다운로드",
+      "registry 기반 중복 방지와 실행 로그 누적",
+      "GitHub Pages용 정적 dashboard 산출",
+    ],
+    tags: ["Node.js", "TypeScript", "Immigration", "Statistics", "Dashboard"],
+    links: {
+      accessNote:
+        "실행 옵션과 정적 dashboard 생성 절차가 README에 정리되어 있으므로 문서를 먼저 보는 흐름이 적절합니다.",
+      readmeLabel: "Open README",
+      readmeUrl: "https://github.com/tyler-bit-ai/kresident/blob/main/README.md",
+      primaryLabel: "Open Repository",
+      primaryUrl: "https://github.com/tyler-bit-ai/kresident",
+      secondaryLabel: "Open Repository Home",
+      secondaryUrl: "https://github.com/tyler-bit-ai/kresident",
+      accessMode: "readme",
+    },
+  },
 ];

@@ -64,6 +64,14 @@ npm run build
 5. `accessNote`에는 사용자가 무엇을 눌러야 하는지 먼저 설명합니다.
 6. `npm run build`로 타입과 정적 번들 결과를 확인합니다.
 
+현재 등록된 프로그램 예시:
+
+- `NewsCollectorV2`
+- `eSIMPriceJapan`
+- `eSIMPriceCollectorDomestic`
+- `eSIMKeywordAnalysis`
+- `kresident`
+
 ## Verification Checklist
 
 - 모든 카드가 상세 패널을 정상 갱신하는가
