@@ -2,6 +2,40 @@ import type { Program } from "../types/program";
 
 export const programs: Program[] = [
   {
+    id: "youtube-comment-analysis",
+    displayName: "Youtube Comment Analysis",
+    repositoryName: "YoutubeCommentAnalysis",
+    category: "Local Web Dashboard",
+    status: "Local",
+    tagline:
+      "YouTube 로밍 관련 영상과 댓글을 수집해 Strategic Insight로 정리하는 로컬 분석 대시보드.",
+    summary:
+      "YouTube 검색 결과에서 로밍 관련 영상을 찾고 댓글을 수집해 시장 반응, 로밍 선택 이유, eSIM 이탈 요인을 `Strategic Insight` 형태로 정리하는 프로젝트입니다. 최신 README 기준으로 정적 프론트엔드(`index.html`)와 Python 프록시 서버(`server.py`)로 구성되며, 댓글 50개 초과 시 무작위 50개 샘플링과 긍정/부정 대표 댓글 표시를 지원합니다.",
+    usage: [
+      "README를 먼저 확인한 뒤 `.env.example`을 복사해 `.env`를 만들고 `YOUTUBE_API_KEY`, `A15T_API_KEY`를 설정합니다.",
+      "`run_app.bat` 또는 `python server.py`로 로컬 서버를 실행합니다.",
+      "브라우저에서 `http://localhost:8000`에 접속해 키워드 검색, 영상별 카드 확인, 댓글 기반 분석 결과를 읽습니다.",
+    ],
+    highlights: [
+      "키워드 기반 YouTube 영상 검색과 댓글 수집",
+      "긍정/부정 균형형 Strategic Insight와 대표 댓글 표시",
+      "50개 초과 댓글 샘플링으로 토큰 사용량 제어",
+    ],
+    tags: ["YouTube", "Comments", "Python", "Local Dashboard", "A15T API"],
+    links: {
+      accessNote:
+        "공개 배포 앱이 아니라 로컬 서버 실행형 프로젝트이므로 README에서 `.env`와 실행 절차를 먼저 확인하는 흐름이 적절합니다.",
+      readmeLabel: "Open README",
+      readmeUrl:
+        "https://github.com/tyler-bit-ai/YoutubeCommentAnalysis/blob/main/README.md",
+      primaryLabel: "Open Repository",
+      primaryUrl: "https://github.com/tyler-bit-ai/YoutubeCommentAnalysis",
+      secondaryLabel: "Open Repository Home",
+      secondaryUrl: "https://github.com/tyler-bit-ai/YoutubeCommentAnalysis",
+      accessMode: "readme",
+    },
+  },
+  {
     id: "news-collector",
     displayName: "NewsCollector",
     repositoryName: "NewsCollectorV2",

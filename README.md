@@ -66,6 +66,7 @@ npm run build
 
 현재 등록된 프로그램 예시:
 
+- `YoutubeCommentAnalysis`
 - `NewsCollectorV2`
 - `eSIMPriceJapan`
 - `eSIMPriceCollectorDomestic`
