@@ -11,6 +11,11 @@ export function ProjectCard({
   onSelect,
   program,
 }: ProjectCardProps) {
+  const compactTagline =
+    program.tagline.length > 70
+      ? `${program.tagline.slice(0, 70).trim()}...`
+      : program.tagline;
+
   return (
     <button
       type="button"
@@ -24,16 +29,7 @@ export function ProjectCard({
         </span>
       </div>
       <h2>{program.displayName}</h2>
-      <p className="card-tagline">{program.tagline}</p>
-      <ul className="card-highlight-list">
-        {program.highlights.slice(0, 2).map((highlight) => (
-          <li key={highlight}>{highlight}</li>
-        ))}
-      </ul>
-      <div className="card-footer">
-        <span>{program.links.accessMode === "app" ? "Direct app access" : "README-led access"}</span>
-        <span aria-hidden="true">View details</span>
-      </div>
+      <p className="card-tagline compact">{compactTagline}</p>
     </button>
   );
 }

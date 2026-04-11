@@ -45,15 +45,6 @@ export function ProjectDetailPanel({ program }: ProjectDetailPanelProps) {
         </ul>
       </div>
 
-      <div className="detail-block">
-        <span className="detail-label">Tags</span>
-        <ul className="chip-list tags">
-          {program.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      </div>
-
       <div className="cta-stack">
         {showReadmeLink ? (
           <a

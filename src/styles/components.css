@@ -17,8 +17,8 @@
 }
 
 .hero {
-  padding: clamp(1.2rem, 2.2vw, 2rem);
-  margin-bottom: 1.1rem;
+  padding: clamp(0.9rem, 1.8vw, 1.35rem);
+  margin-bottom: 0.95rem;
 }
 
 .hero::after {
@@ -52,8 +52,9 @@
 
 .hero h1 {
   max-width: none;
-  font-size: clamp(1.8rem, 3.4vw, 2.8rem);
-  line-height: 1.08;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
 }
 
 .eyebrow,
@@ -95,6 +96,11 @@
   padding: 1rem;
 }
 
+.project-grid-panel {
+  display: grid;
+  align-content: start;
+}
+
 .section-heading h2 {
   font-size: clamp(1.3rem, 2.2vw, 1.8rem);
   margin-top: 0.2rem;
@@ -112,9 +118,36 @@
   gap: 1rem;
 }
 
+.project-group-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-group-section {
+  display: grid;
+  gap: 0.8rem;
+  padding: 0.9rem;
+  border: 1px solid rgba(54, 44, 33, 0.1);
+  border-radius: var(--radius-lg);
+  background: rgba(255, 255, 255, 0.44);
+}
+
+.project-group-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.project-group-heading h3 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: -0.03em;
+}
+
 .project-card {
   width: 100%;
-  padding: 0.95rem;
+  padding: 0.8rem 0.85rem;
   border: 1px solid rgba(54, 44, 33, 0.12);
   border-radius: var(--radius-lg);
   background:
@@ -152,8 +185,12 @@
   gap: 0.75rem;
 }
 
+.card-header {
+  align-items: center;
+}
+
 .card-status {
-  padding: 0.3rem 0.55rem;
+  padding: 0.26rem 0.5rem;
   border: 1px solid rgba(54, 44, 33, 0.12);
   background: rgba(255, 255, 255, 0.72);
 }
@@ -169,14 +206,20 @@
 }
 
 .project-card h2 {
-  margin-top: 0.85rem;
-  font-size: 1.14rem;
+  margin-top: 0.65rem;
+  font-size: 1.02rem;
+  line-height: 1.3;
 }
 
 .card-tagline {
-  margin: 0.6rem 0 0.85rem;
+  margin: 0.42rem 0 0;
   font-size: 0.92rem;
   line-height: 1.55;
+}
+
+.card-tagline.compact {
+  font-size: 0.83rem;
+  line-height: 1.45;
 }
 
 .card-highlight-list,
@@ -212,67 +255,71 @@
   position: sticky;
   top: 1rem;
   display: grid;
-  gap: 0.85rem;
+  gap: 0.72rem;
   background:
     radial-gradient(circle at top right, rgba(15, 118, 110, 0.16), transparent 36%),
     linear-gradient(180deg, rgba(255, 252, 246, 0.98), rgba(255, 247, 238, 0.96));
 }
 
+.detail-panel .section-heading h2 {
+  font-size: clamp(1.14rem, 1.9vw, 1.45rem);
+}
+
+.detail-panel .section-heading p {
+  font-size: 0.88rem;
+  line-height: 1.55;
+}
+
 .detail-block {
-  padding-top: 0.85rem;
+  padding-top: 0.72rem;
   border-top: 1px solid rgba(54, 44, 33, 0.08);
 }
 
 .detail-block p {
-  margin: 0.4rem 0 0;
-  font-size: 0.92rem;
-  line-height: 1.65;
+  margin: 0.34rem 0 0;
+  font-size: 0.86rem;
+  line-height: 1.55;
 }
 
 .usage-list {
   padding-left: 1.05rem;
   display: grid;
-  gap: 0.65rem;
-  font-size: 0.92rem;
-  line-height: 1.62;
+  gap: 0.5rem;
+  font-size: 0.86rem;
+  line-height: 1.54;
 }
 
 .chip-list {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.45rem;
-  margin-top: 0.6rem;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
 }
 
 .chip-list li {
-  padding: 0.45rem 0.72rem;
+  padding: 0.38rem 0.62rem;
   border: 1px solid rgba(15, 118, 110, 0.16);
   background: rgba(255, 255, 255, 0.78);
   color: var(--ink);
-  font-size: 0.84rem;
-}
-
-.chip-list.tags li {
-  border-color: rgba(54, 44, 33, 0.12);
-  background: rgba(255, 250, 242, 0.92);
+  font-size: 0.78rem;
 }
 
 .cta-stack {
   display: grid;
-  gap: 0.65rem;
+  gap: 0.55rem;
 }
 
 .cta {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.9rem;
-  padding: 0.72rem 1rem;
+  min-height: 2.6rem;
+  padding: 0.64rem 0.92rem;
   border-radius: 16px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   transition:
     transform 180ms ease,
     background-color 180ms ease,

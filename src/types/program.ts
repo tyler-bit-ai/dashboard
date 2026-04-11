@@ -1,4 +1,5 @@
 export type ProgramAccessMode = "app" | "readme";
+export type ProgramGroup = "Inbound" | "Outbound" | "기타";
 
 export interface ProgramLinkSet {
   accessNote: string;
@@ -13,6 +14,7 @@ export interface ProgramLinkSet {
 
 export interface Program {
   id: string;
+  group: ProgramGroup;
   displayName: string;
   repositoryName: string;
   category: string;

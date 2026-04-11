@@ -2,73 +2,8 @@ import type { Program } from "../types/program";
 
 export const programs: Program[] = [
   {
-    id: "youtube-comment-analysis",
-    displayName: "Youtube Comment Analysis",
-    repositoryName: "YoutubeCommentAnalysisVersel",
-    category: "Published Dashboard",
-    status: "Live",
-    tagline:
-      "YouTube 댓글과 답글을 분석해 Strategic Insight를 제공하는 Vercel 배포 대시보드.",
-    summary:
-      "기존 로컬 `Youtube_comment_analysis` 프로젝트를 Vercel 배포용으로 재구성한 버전입니다. 최신 README 기준으로 정적 프론트는 `public/index.html`, 서버 기능은 Vercel Python Functions로 분리되어 있으며, YouTube 키워드 검색, 상위 댓글+답글 수집, 50개 초과 댓글 샘플 분석, 긍정/부정 균형형 `Strategic Insight`, 도움말 버튼 기반 사용 안내를 제공합니다.",
-    usage: [
-      "배포 앱에서 키워드를 입력해 관련 YouTube 영상 카드 목록을 조회합니다.",
-      "카드에서 조회수, 댓글 수, `구독자 대비 조회수 N배`를 확인하고 원하는 영상을 선택합니다.",
-      "분석 결과 모달에서 상위 댓글과 답글 기반 요약, 대표 긍정/부정 댓글, 실행 전략을 확인합니다.",
-    ],
-    highlights: [
-      "Vercel 배포형 YouTube 댓글 분석 대시보드",
-      "50개 초과 댓글 무작위 샘플 분석과 대표 댓글 표시",
-      "YouTube/A15T 프록시를 서버측 환경변수로 보호",
-    ],
-    tags: ["YouTube", "Comments", "Python", "Vercel", "A15T API"],
-    links: {
-      accessNote:
-        "Vercel에 배포된 앱으로 바로 진입할 수 있으며, 환경설정이나 API 계약이 필요하면 README를 함께 확인하면 됩니다.",
-      readmeLabel: "Open README",
-      readmeUrl:
-        "https://github.com/tyler-bit-ai/YoutubeCommentAnalysisVersel/blob/main/README.md",
-      primaryLabel: "Open App",
-      primaryUrl: "https://youtubecommentanalysisversel.vercel.app/",
-      secondaryLabel: "Open Repository",
-      secondaryUrl: "https://github.com/tyler-bit-ai/YoutubeCommentAnalysisVersel",
-      accessMode: "app",
-    },
-  },
-  {
-    id: "news-collector",
-    displayName: "NewsCollector",
-    repositoryName: "NewsCollectorV2",
-    category: "Intelligence Pipeline",
-    status: "v2.0",
-    tagline: "뉴스 수집, AI 2단계 분석, 웹/이메일 배포를 묶은 Python 시스템.",
-    summary:
-      "6개 카테고리 기사·게시글을 자동 수집하고 AI 2단계 분석 후 웹 리포트와 이메일로 배포하는 시스템입니다. 최신 README 기준으로 0404.go.kr 당일 통신 이슈 공지 수집, Global Roaming Trend 한글 전용 표시, 수신자 그룹 분리 관리까지 포함합니다.",
-    usage: [
-      "Python 3.9+에서 `pip install -r requirements.txt` 후 필요 시 `pip install python-dotenv`를 추가합니다.",
-      "`.env.example`을 복사한 뒤 Naver, Google CSE, OpenAI, Gmail SMTP와 리포트 옵션 값을 설정합니다.",
-      "`python run.py` 또는 `python main.py`로 전체 파이프라인을 실행하고, `python start_web.py`로 관리용 웹 대시보드를 실행합니다.",
-    ],
-    highlights: [
-      "Naver/Google + 0404 해외안전여행 공지 수집",
-      "AI 요약과 전략 인사이트 2단계 분석",
-      "웹 리포트 이력 저장과 수신자 그룹별 이메일 발송",
-    ],
-    tags: ["Python", "OpenAI", "News", "Analytics", "Email"],
-    links: {
-      accessNote:
-        "웹 대시보드 실행 방법이 README에 포함되어 있으므로 문서를 먼저 읽는 흐름이 적절합니다.",
-      readmeLabel: "Open README",
-      readmeUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2/blob/master/README.md",
-      primaryLabel: "Open Repository",
-      primaryUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2",
-      secondaryLabel: "Open Repository Home",
-      secondaryUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2",
-      accessMode: "readme",
-    },
-  },
-  {
     id: "esim-price-japan",
+    group: "Inbound",
     displayName: "Japan Marketplace eSIM Insight",
     repositoryName: "eSIMPriceJapan",
     category: "Published Dashboard",
@@ -100,40 +35,8 @@ export const programs: Program[] = [
     },
   },
   {
-    id: "esim-price-domestic",
-    displayName: "국내 판매 해외 eSIM 가격 비교",
-    repositoryName: "eSIMPriceCollectorDomestic",
-    category: "Published Dashboard",
-    status: "Live",
-    tagline: "국내 eSIM 판매 사이트의 해외 사용 상품 가격을 비교하는 정적 대시보드.",
-    summary:
-      "국내 eSIM 판매 사이트의 해외 사용 상품을 수집·정규화해 GitHub Pages 대시보드로 비교하는 프로젝트입니다. 최신 README 기준으로 `usimsa`, `pindirect`, `rokebi`, `maaltalk`와 JP/VN/US/PH 대상 국가를 지원하며, 최신 publish 스냅샷과 이력 비교를 함께 제공합니다.",
-    usage: [
-      "상단에서 사이트, 국가, 사용일수, 데이터, 망 유형, 정렬 기준과 비교 시점을 선택합니다.",
-      "국가별 가격 분포 밴드와 `local / roaming` 가격 차이, 시점별 변경 상품을 확인합니다.",
-      "필요하면 `python -m app crawl --registry config/source_registry.yml --out data --publish-dashboard`로 대시보드용 데이터를 갱신합니다.",
-    ],
-    highlights: [
-      "4개 국내 판매 사이트 통합 수집",
-      "최신 스냅샷과 일자별 이력 비교",
-      "상세 비교표와 GitHub Actions 배포",
-    ],
-    tags: ["eSIM", "Pricing", "Domestic", "Dashboard"],
-    links: {
-      accessNote:
-        "공개된 GitHub Pages 대시보드에서 최신 스냅샷과 과거 시점을 함께 비교할 수 있습니다.",
-      readmeLabel: "Open README",
-      readmeUrl:
-        "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic/blob/main/README.md",
-      primaryLabel: "Open App",
-      primaryUrl: "https://tyler-bit-ai.github.io/eSIMPriceCollectorDomestic/",
-      secondaryLabel: "Open Repository",
-      secondaryUrl: "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic",
-      accessMode: "app",
-    },
-  },
-  {
     id: "esim-keyword-analysis",
+    group: "Inbound",
     displayName: "Korea Inbound eSIM Market Signals",
     repositoryName: "eSIMKeywordAnalysis",
     category: "Published Dashboard",
@@ -167,6 +70,7 @@ export const programs: Program[] = [
   },
   {
     id: "kresident",
+    group: "Inbound",
     displayName: "체류외국인 통계 Dashboard",
     repositoryName: "kresident",
     category: "Data Pipeline + Static Dashboard",
@@ -193,6 +97,140 @@ export const programs: Program[] = [
       primaryUrl: "https://tyler-bit-ai.github.io/kresident/",
       secondaryLabel: "Open Repository",
       secondaryUrl: "https://github.com/tyler-bit-ai/kresident",
+      accessMode: "app",
+    },
+  },
+  {
+    id: "esim-price-domestic",
+    group: "Outbound",
+    displayName: "국내 판매 해외 eSIM 가격 비교",
+    repositoryName: "eSIMPriceCollectorDomestic",
+    category: "Published Dashboard",
+    status: "Live",
+    tagline: "국내 eSIM 판매 사이트의 해외 사용 상품 가격을 비교하는 정적 대시보드.",
+    summary:
+      "국내 eSIM 판매 사이트의 해외 사용 상품을 수집·정규화해 GitHub Pages 대시보드로 비교하는 프로젝트입니다. 최신 README 기준으로 `usimsa`, `pindirect`, `rokebi`, `maaltalk`와 JP/VN/US/PH 대상 국가를 지원하며, 최신 publish 스냅샷과 이력 비교를 함께 제공합니다.",
+    usage: [
+      "상단에서 사이트, 국가, 사용일수, 데이터, 망 유형, 정렬 기준과 비교 시점을 선택합니다.",
+      "국가별 가격 분포 밴드와 `local / roaming` 가격 차이, 시점별 변경 상품을 확인합니다.",
+      "필요하면 `python -m app crawl --registry config/source_registry.yml --out data --publish-dashboard`로 대시보드용 데이터를 갱신합니다.",
+    ],
+    highlights: [
+      "4개 국내 판매 사이트 통합 수집",
+      "최신 스냅샷과 일자별 이력 비교",
+      "상세 비교표와 GitHub Actions 배포",
+    ],
+    tags: ["eSIM", "Pricing", "Domestic", "Dashboard"],
+    links: {
+      accessNote:
+        "공개된 GitHub Pages 대시보드에서 최신 스냅샷과 과거 시점을 함께 비교할 수 있습니다.",
+      readmeLabel: "Open README",
+      readmeUrl:
+        "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic/blob/main/README.md",
+      primaryLabel: "Open App",
+      primaryUrl: "https://tyler-bit-ai.github.io/eSIMPriceCollectorDomestic/",
+      secondaryLabel: "Open Repository",
+      secondaryUrl: "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic",
+      accessMode: "app",
+    },
+  },
+  {
+    id: "roaming-competitor-monitor",
+    group: "Outbound",
+    displayName: "Roaming Competitor Monitor",
+    repositoryName: "Not linked yet",
+    category: "Internal Dashboard",
+    status: "Live",
+    tagline:
+      "KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부용 경쟁 모니터링 대시보드.",
+    summary:
+      "배포 페이지 메타 설명 기준으로 KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부 대시보드입니다. 통신사별 로밍 요금제, 데이터 제공량, 기간, 커버리지, 부가 혜택과 같은 항목을 묶어 읽을 수 있도록 구성된 경쟁 모니터링 화면으로 보입니다.",
+    usage: [
+      "대시보드에서 통신사별 로밍 상품 라인업과 가격·데이터 제공량·사용 기간을 비교합니다.",
+      "KT·LGU+ 상품 변동과 SKT 대비 포지셔닝 차이를 확인하며 경쟁 상황을 빠르게 스캔합니다.",
+      "실제 운영 기준이나 검증 방식이 추가되면 추후 README와 저장소 링크를 연결할 수 있습니다.",
+    ],
+    highlights: [
+      "KT·LGU+ 로밍 상품 변동 추적",
+      "SKT 대비 비교 분석 중심 화면",
+      "가격, 데이터, 기간, 혜택 단위 경쟁 모니터링",
+    ],
+    tags: ["Roaming", "Competitor Monitor", "Telecom", "Internal Dashboard"],
+    links: {
+      accessNote:
+        "현재는 배포된 앱으로 바로 접근하는 흐름만 연결되어 있으며, README와 저장소 링크는 추후 추가 가능합니다.",
+      primaryLabel: "Open App",
+      primaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
+      secondaryLabel: "Open App",
+      secondaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
+      accessMode: "app",
+    },
+  },
+  {
+    id: "news-collector",
+    group: "기타",
+    displayName: "NewsCollector",
+    repositoryName: "NewsCollectorV2",
+    category: "Intelligence Pipeline",
+    status: "v2.0",
+    tagline: "뉴스 수집, AI 2단계 분석, 웹/이메일 배포를 묶은 Python 시스템.",
+    summary:
+      "6개 카테고리 기사·게시글을 자동 수집하고 AI 2단계 분석 후 웹 리포트와 이메일로 배포하는 시스템입니다. 최신 README 기준으로 0404.go.kr 당일 통신 이슈 공지 수집, Global Roaming Trend 한글 전용 표시, 수신자 그룹 분리 관리까지 포함합니다.",
+    usage: [
+      "Python 3.9+에서 `pip install -r requirements.txt` 후 필요 시 `pip install python-dotenv`를 추가합니다.",
+      "`.env.example`을 복사한 뒤 Naver, Google CSE, OpenAI, Gmail SMTP와 리포트 옵션 값을 설정합니다.",
+      "`python run.py` 또는 `python main.py`로 전체 파이프라인을 실행하고, `python start_web.py`로 관리용 웹 대시보드를 실행합니다.",
+    ],
+    highlights: [
+      "Naver/Google + 0404 해외안전여행 공지 수집",
+      "AI 요약과 전략 인사이트 2단계 분석",
+      "웹 리포트 이력 저장과 수신자 그룹별 이메일 발송",
+    ],
+    tags: ["Python", "OpenAI", "News", "Analytics", "Email"],
+    links: {
+      accessNote:
+        "웹 대시보드 실행 방법이 README에 포함되어 있으므로 문서를 먼저 읽는 흐름이 적절합니다.",
+      readmeLabel: "Open README",
+      readmeUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2/blob/master/README.md",
+      primaryLabel: "Open Repository",
+      primaryUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2",
+      secondaryLabel: "Open Repository Home",
+      secondaryUrl: "https://github.com/tyler-bit-ai/NewsCollectorV2",
+      accessMode: "readme",
+    },
+  },
+  {
+    id: "youtube-comment-analysis",
+    group: "기타",
+    displayName: "Youtube Comment Analysis",
+    repositoryName: "YoutubeCommentAnalysisVersel",
+    category: "Published Dashboard",
+    status: "Live",
+    tagline:
+      "YouTube 댓글과 답글을 분석해 Strategic Insight를 제공하는 Vercel 배포 대시보드.",
+    summary:
+      "기존 로컬 `Youtube_comment_analysis` 프로젝트를 Vercel 배포용으로 재구성한 버전입니다. 최신 README 기준으로 정적 프론트는 `public/index.html`, 서버 기능은 Vercel Python Functions로 분리되어 있으며, YouTube 키워드 검색, 상위 댓글+답글 수집, 50개 초과 댓글 샘플 분석, 긍정/부정 균형형 `Strategic Insight`, 도움말 버튼 기반 사용 안내를 제공합니다.",
+    usage: [
+      "배포 앱에서 키워드를 입력해 관련 YouTube 영상 카드 목록을 조회합니다.",
+      "카드에서 조회수, 댓글 수, `구독자 대비 조회수 N배`를 확인하고 원하는 영상을 선택합니다.",
+      "분석 결과 모달에서 상위 댓글과 답글 기반 요약, 대표 긍정/부정 댓글, 실행 전략을 확인합니다.",
+    ],
+    highlights: [
+      "Vercel 배포형 YouTube 댓글 분석 대시보드",
+      "50개 초과 댓글 무작위 샘플 분석과 대표 댓글 표시",
+      "YouTube/A15T 프록시를 서버측 환경변수로 보호",
+    ],
+    tags: ["YouTube", "Comments", "Python", "Vercel", "A15T API"],
+    links: {
+      accessNote:
+        "Vercel에 배포된 앱으로 바로 진입할 수 있으며, 환경설정이나 API 계약이 필요하면 README를 함께 확인하면 됩니다.",
+      readmeLabel: "Open README",
+      readmeUrl:
+        "https://github.com/tyler-bit-ai/YoutubeCommentAnalysisVersel/blob/main/README.md",
+      primaryLabel: "Open App",
+      primaryUrl: "https://youtubecommentanalysisversel.vercel.app/",
+      secondaryLabel: "Open Repository",
+      secondaryUrl: "https://github.com/tyler-bit-ai/YoutubeCommentAnalysisVersel",
       accessMode: "app",
     },
   },
