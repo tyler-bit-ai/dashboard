@@ -101,6 +101,38 @@ export const programs: Program[] = [
     },
   },
   {
+    id: "roaming-competitor-monitor",
+    group: "Outbound",
+    displayName: "Roaming Competitor Monitor",
+    repositoryName: "Not linked yet",
+    category: "Internal Dashboard",
+    status: "Live",
+    tagline:
+      "KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부용 경쟁 모니터링 대시보드.",
+    summary:
+      "배포 페이지 메타 설명 기준으로 KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부 대시보드입니다. 통신사별 로밍 요금제, 데이터 제공량, 기간, 커버리지, 부가 혜택과 같은 항목을 묶어 읽을 수 있도록 구성된 경쟁 모니터링 화면으로 보입니다.",
+    usage: [
+      "대시보드에서 통신사별 로밍 상품 라인업과 가격·데이터 제공량·사용 기간을 비교합니다.",
+      "KT·LGU+ 상품 변동과 SKT 대비 포지셔닝 차이를 확인하며 경쟁 상황을 빠르게 스캔합니다.",
+      "실제 운영 기준이나 검증 방식이 추가되면 추후 README와 저장소 링크를 연결할 수 있습니다.",
+    ],
+    highlights: [
+      "KT·LGU+ 로밍 상품 변동 추적",
+      "SKT 대비 비교 분석 중심 화면",
+      "가격, 데이터, 기간, 혜택 단위 경쟁 모니터링",
+    ],
+    tags: ["Roaming", "Competitor Monitor", "Telecom", "Internal Dashboard"],
+    links: {
+      accessNote:
+        "현재는 배포된 앱으로 바로 접근하는 흐름만 연결되어 있으며, README와 저장소 링크는 추후 추가 가능합니다.",
+      primaryLabel: "Open App",
+      primaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
+      secondaryLabel: "Open App",
+      secondaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
+      accessMode: "app",
+    },
+  },
+  {
     id: "esim-price-domestic",
     group: "Outbound",
     displayName: "국내 판매 해외 eSIM 가격 비교",
@@ -131,38 +163,6 @@ export const programs: Program[] = [
       primaryUrl: "https://tyler-bit-ai.github.io/eSIMPriceCollectorDomestic/",
       secondaryLabel: "Open Repository",
       secondaryUrl: "https://github.com/tyler-bit-ai/eSIMPriceCollectorDomestic",
-      accessMode: "app",
-    },
-  },
-  {
-    id: "roaming-competitor-monitor",
-    group: "Outbound",
-    displayName: "Roaming Competitor Monitor",
-    repositoryName: "Not linked yet",
-    category: "Internal Dashboard",
-    status: "Live",
-    tagline:
-      "KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부용 경쟁 모니터링 대시보드.",
-    summary:
-      "배포 페이지 메타 설명 기준으로 KT·LGU+ 로밍 상품 변동을 추적하고 SKT와 비교 분석하는 내부 대시보드입니다. 통신사별 로밍 요금제, 데이터 제공량, 기간, 커버리지, 부가 혜택과 같은 항목을 묶어 읽을 수 있도록 구성된 경쟁 모니터링 화면으로 보입니다.",
-    usage: [
-      "대시보드에서 통신사별 로밍 상품 라인업과 가격·데이터 제공량·사용 기간을 비교합니다.",
-      "KT·LGU+ 상품 변동과 SKT 대비 포지셔닝 차이를 확인하며 경쟁 상황을 빠르게 스캔합니다.",
-      "실제 운영 기준이나 검증 방식이 추가되면 추후 README와 저장소 링크를 연결할 수 있습니다.",
-    ],
-    highlights: [
-      "KT·LGU+ 로밍 상품 변동 추적",
-      "SKT 대비 비교 분석 중심 화면",
-      "가격, 데이터, 기간, 혜택 단위 경쟁 모니터링",
-    ],
-    tags: ["Roaming", "Competitor Monitor", "Telecom", "Internal Dashboard"],
-    links: {
-      accessNote:
-        "현재는 배포된 앱으로 바로 접근하는 흐름만 연결되어 있으며, README와 저장소 링크는 추후 추가 가능합니다.",
-      primaryLabel: "Open App",
-      primaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
-      secondaryLabel: "Open App",
-      secondaryUrl: "https://outbound-dashboard-orpin.vercel.app/",
       accessMode: "app",
     },
   },
