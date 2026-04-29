@@ -133,6 +133,38 @@ export const programs: Program[] = [
     },
   },
   {
+    id: "churn-analyzer",
+    group: "Outbound",
+    displayName: "Churn Analyzer",
+    repositoryName: "Not linked yet",
+    category: "AI Operations Dashboard",
+    status: "Live",
+    tagline:
+      "온라인 게시글과 고객 리뷰에서 로밍 이탈 사유를 AI로 구조화하는 운영 분석 대시보드.",
+    summary:
+      "네이버 블로그, 지식iN, 유튜브, 커뮤니티, 앱 리뷰와 고객 리뷰 데이터에서 고객이 로밍 대신 다른 수단을 선택한 이유를 AI로 자동 분석하는 대시보드입니다. 이탈 위험도, 사유 카테고리, 경쟁 대체수단, 원문 근거, 수동 검토 대상과 추천 액션 아이템을 한 화면에서 운영 지표로 확인할 수 있습니다.",
+    usage: [
+      "대시보드 개요에서 오늘 수집량, AI 분석 완료 건수, 이탈 위험도와 검토 필요 항목을 확인합니다.",
+      "카테고리·경쟁 수단·트렌드·원본 탐색 메뉴로 이동해 가격, 커버리지, 보안, 가입/해지 불편 등 이탈 신호를 세부 분석합니다.",
+      "수동 검토와 액션 아이템 화면에서 AI 확신도가 낮은 항목과 우선 대응 과제를 정리합니다.",
+    ],
+    highlights: [
+      "로밍 이탈 위험도와 Detractor 비율 정량화",
+      "이탈 사유 카테고리와 경쟁 대체수단 분석",
+      "원문 근거, 수동 검토, 액션 아이템 운영 흐름",
+    ],
+    tags: ["Roaming", "Churn", "AI Analysis", "Operations Dashboard"],
+    links: {
+      accessNote:
+        "Vercel에 배포된 앱으로 바로 진입할 수 있으며, 온라인 게시글과 리뷰 기반 로밍 이탈 신호를 운영 대시보드 형태로 확인합니다.",
+      primaryLabel: "Open App",
+      primaryUrl: "https://churnanalyzer.vercel.app/",
+      secondaryLabel: "Open App",
+      secondaryUrl: "https://churnanalyzer.vercel.app/",
+      accessMode: "app",
+    },
+  },
+  {
     id: "esim-price-domestic",
     group: "Outbound",
     displayName: "국내 판매 해외 eSIM 가격 비교",
