@@ -35,6 +35,39 @@ export const programs: Program[] = [
     },
   },
   {
+    id: "esim-price-usa",
+    group: "Inbound",
+    displayName: "USA Marketplace eSIM Insight",
+    repositoryName: "eSIMPriceUSA",
+    category: "Published Dashboard",
+    status: "Live",
+    tagline: "Amazon US eSIM 상품을 국가별로 비교하는 공개 대시보드.",
+    summary:
+      "미국 마켓플레이스 eSIM 상품을 `site + country + dataset` 단위로 비교하는 공개 대시보드입니다. 최신 README 기준으로 `amazon_us`를 지원하고, 한국·베트남·태국·대만·홍콩·마카오·일본 7개국 데이터와 함께 KPI, 정렬, 다운로드, KRW 환산 가격까지 제공합니다.",
+    usage: [
+      "대시보드에서 국가와 데이터셋을 고른 뒤 검색어·네트워크·데이터·사용기간·통신사 조건을 조정합니다.",
+      "가격, 판매량, 리뷰, 사용기간 기준으로 정렬하며 KPI와 분포를 확인합니다.",
+      "필터 결과를 다운로드하고 필요하면 `npm run dashboard`로 로컬 대시보드를 확인합니다.",
+    ],
+    highlights: [
+      "Amazon US 7개국(한국/베트남/태국/대만/홍콩/마카오/일본) 비교",
+      "KRW 환산 가격과 dataset selector 지원",
+      "상세 항목 다운로드와 publish workflow 제공",
+    ],
+    tags: ["eSIM", "USA", "Marketplace", "Dashboard"],
+    links: {
+      accessNote:
+        "공개된 GitHub Pages 대시보드에서 국가·데이터셋별 결과를 바로 확인할 수 있습니다.",
+      readmeLabel: "Open README",
+      readmeUrl: "https://github.com/tyler-bit-ai/eSIMPriceUSA/blob/main/README.md",
+      primaryLabel: "Open App",
+      primaryUrl: "https://tyler-bit-ai.github.io/eSIMPriceUSA/dashboard/",
+      secondaryLabel: "Open Repository",
+      secondaryUrl: "https://github.com/tyler-bit-ai/eSIMPriceUSA",
+      accessMode: "app",
+    },
+  },
+  {
     id: "esim-keyword-analysis",
     group: "Inbound",
     displayName: "Korea Inbound eSIM Market Signals",
