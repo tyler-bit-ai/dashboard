@@ -1,50 +1,62 @@
 import { ProjectCard } from "./ProjectCard";
+import { GROUP_ORDER, GroupBadge } from "./icons";
 import type { Program, ProgramGroup } from "../types/program";
 
 interface ProjectGridProps {
-  onSelect: (id: string) => void;
+  favorites: string[];
+  group: ProgramGroup | "all";
+  onDetail: (id: string) => void;
+  onOpen: (id: string) => void;
+  onToggleFavorite: (id: string) => void;
   programs: Program[];
-  selectedId: string;
 }
 
 export function ProjectGrid({
-  onSelect,
+  favorites,
+  group,
+  onDetail,
+  onOpen,
+  onToggleFavorite,
   programs,
-  selectedId,
 }: ProjectGridProps) {
-  const groupOrder: ProgramGroup[] = ["Inbound", "Outbound", "기타"];
-  const groupedPrograms = groupOrder
-    .map((group) => ({
-      group,
-      items: programs.filter((program) => program.group === group),
-    }))
-    .filter(({ items }) => items.length > 0);
+  if (programs.length === 0) {
+    return (
+      <div className="empty-state">
+        <strong>검색 결과가 없습니다</strong>
+        다른 검색어를 입력하거나 필터를 해제해 보세요.
+      </div>
+    );
+  }
+
+  const groups = group === "all" ? GROUP_ORDER : [group];
 
   return (
-    <section className="project-grid-panel" aria-label="Programs">
-      <div className="project-group-list">
-        {groupedPrograms.map(({ group, items }) => (
-          <section
-            key={group}
-            className="project-group-section"
-            aria-label={`${group} programs`}
-          >
+    <div className="project-group-list">
+      {groups.map((name) => {
+        const items = programs.filter((program) => program.group === name);
+        if (items.length === 0) return null;
+        return (
+          <section key={name} className="project-group-section" aria-label={name}>
             <div className="project-group-heading">
-              <h3>{group}</h3>
+              <GroupBadge group={name} size="sm" />
+              <h2>{name}</h2>
+              <span>{items.length}개</span>
             </div>
             <div className="project-grid">
               {items.map((program) => (
                 <ProjectCard
                   key={program.id}
-                  isSelected={selectedId === program.id}
-                  onSelect={onSelect}
+                  isFavorite={favorites.includes(program.id)}
+                  onDetail={onDetail}
+                  onOpen={onOpen}
+                  onToggleFavorite={onToggleFavorite}
                   program={program}
                 />
               ))}
             </div>
           </section>
-        ))}
-      </div>
-    </section>
+        );
+      })}
+    </div>
   );
 }

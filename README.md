@@ -36,6 +36,14 @@ npm run build
 3. `.github/workflows/deploy.yml`이 자동으로 실행되어 `dist/`를 Pages에 배포합니다.
 4. 배포 주소는 `https://tyler-bit-ai.github.io/dashboard/`가 됩니다.
 
+## UI Features
+
+- 상단 검색(`/` 키로 포커스), 그룹 탭 필터, 즐겨찾기만 보기
+- 카드의 `열기`로 바로 진입하고, `상세`는 우측 드로어로 표시
+- 즐겨찾기 / 최근 사용은 브라우저 `localStorage`(`hub-favorites`, `hub-recent`)에만 저장되며 서버는 사용하지 않습니다.
+- 라이트/다크 테마 토글(`hub-theme`), 기본값은 OS 설정을 따릅니다.
+- 재사용 훅은 `src/hooks/`에 둡니다 (`useStoredState`).
+
 ## Content Model
 
 - 프로그램 메타데이터는 `src/data/programs.ts`에서 관리합니다.
